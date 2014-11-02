@@ -1,0 +1,24 @@
+branches:
+  only:
+  - master
+language: php
+php:
+- '5.3'
+env:
+  matrix:
+  - J_VERSION=master
+  global:
+    secure: oMQbonpB55EtzhWkMAsI1ZhI5FHehwsON72bzlOp0Zt102x7aUPp8/sjy0Zdie2XMRknyuAr5uD7cAsqZBfKJsQKJe0gpLT5Z4xjjTfbsFXwTTjW4FNQFzIeTyMR4pXMCcaPOKxDrgDvFDdK+ahGnz8uLwYJ4m4ZaZf8pa5mEMo=
+matrix:
+  include:
+  - php: '5.4'
+    env: J_VERSION=3.0
+  - php: '5.3'
+    env: J_VERSION=2.5
+before_script:
+- export PLUGIN_SLUG=$(basename $(pwd))
+- export REPO_BASE=`pwd`
+script:
+- true
+after_success:
+- sh .travis_onSuccess.sh
