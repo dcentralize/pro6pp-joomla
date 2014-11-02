@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="2.5" type="plugin" group="system" method="upgrade">
+
+  <name>Pro6PP</name>
+  <creationDate>2013-11</creationDate>
+  <author>d-centralize</author>
+  <authorEmail>support@d-centralize.nl</authorEmail>
+  <authorUrl>http://www.d-centralize.nl</authorUrl>
+  <copyright>Copyright 2013</copyright>
+  <license></license>
+  <version>0.1</version>
+  <description>PLG_PRO6PP_XML_DESCRIPTION</description>
+
+  <files>
+    <filename plugin="pro6pp">pro6pp.php</filename>
+    <filename>pro6ppVariables.php</filename>
+    <filename>index.html</filename>
+    <folder>language</folder>
+  </files>
+
+  <media destination="plg_pro6pp" folder="media">
+    <folder>js</folder>
+    <filename>ajax-loader.gif</filename>
+  </media>
+
+  <config>
+    <fields name="params">
+      <fieldset name="PLG_PRO6PP_AUTH_KEY">
+        <field name="pro6pp_auth_desc" type="spacer"
+            label="PLG_PRO6PP_SPACER_DESC" />
+
+        <field name="pro6pp_authentication" type="text" default="YOUR_AUTH_KEY"
+          class="validate-key" required="required"
+          description="PLG_PRO6PP_AUTH_KEY_DESC"
+          label="PLG_PRO6PP_AUTH_KEY_LBL" size="20" />
+
+
+        <field name="pro6pp_timeout" type="text" default="10000" class="validate-ms"
+          required="required" description="PLG_PRO6PP_TIMEOUT_DESC"
+          label="PLG_PRO6PP_TIMEOUT_LBL"
+          size="10" />
+
+        <field name="pro6pp_connection" type="list" default="0"
+          description="PLG_PRO6PP_CONNECTION_DESC"
+          label="PLG_PRO6PP_CONNECTION_LBL">
+          <option value="jsocket">PLG_PRO6PP_CONNECTION_JSOCKET</option>
+          <option value="jstream">PLG_PRO6PP_CONNECTION_JSTREAM</option>
+          <option value="jcurl">PLG_PRO6PP_CONNECTION_JCURL</option>
+        </field>
+
+      </fieldset>
+      <fieldset name="PLG_PRO6PP_CONFIG">
+        <field name="pro6pp_autocomplete" type="radio" default="1"
+          description="PLG_PRO6PP_AUTOCOMPLETE_DESC"
+          label="PLG_PRO6PP_AUTOCOMPLETE_LBL"
+          size="20">
+          <option value="0">PLG_PRO6PP_FALSE</option>
+          <option value="1">PLG_PRO6PP_TRUE</option>
+        </field>
+
+        <field name="pro6pp_enforce_validation" type="radio" default="1"
+          description="PLG_PRO6PP_ENFORCE_VALIDATION_DESC"
+          label="PLG_PRO6PP_ENFORCE_VALIDATION_LBL"
+          size="20">
+          <option value="0">PLG_PRO6PP_FALSE</option>
+          <option value="1">PLG_PRO6PP_TRUE</option>
+        </field>
+        <field name="pro6pp_gracefully_degrade" type="radio" default="1"
+          description="PLG_PRO6PP_GRACEFULLY_DEGRADE_DESC"
+          label="PLG_PRO6PP_GRACEFULLY_DEGRADE_LBL"
+          size="20">
+          <option value="0">PLG_PRO6PP_FALSE</option>
+          <option value="1">PLG_PRO6PP_TRUE</option>
+        </field>
+        <field name="pro6pp_provide_feedback" type="radio" default="0"
+          description="PLG_PRO6PP_FEEDBACK_DESC"
+          label="PLG_PRO6PP_FEEDBACK_LBL"
+          size="20">
+          <option value="0">PLG_PRO6PP_FALSE</option>
+          <option value="1">PLG_PRO6PP_TRUE</option>
+        </field>
+      </fieldset>
+
+    </fields>
+  </config>
+</extension>
