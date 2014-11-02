@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<install type="component" version="2.5" method="upgrade">
+  <name>Pro6PP</name>
+  <creationDate>2013-09-12</creationDate>
+  <author>d-centralize</author>
+  <authorEmail>isupport@d-centralize.nl</authorEmail>
+  <authorUrl>http://www.d-centralize.nl</authorUrl>
+  <copyright>Copyright Info</copyright>
+  <license>License Info</license>
+  <!-- The version string is recorded in the components table -->
+  <version>0.0.1</version>
+  <!-- The description is optional and defaults to the name -->
+  <description>Pro6PP BackEnd controller</description>
+
+  <!-- Runs on install/uninstall/update; New in 2.5 -->
+  <scriptfile>script.php</scriptfile>
+
+<!-- <install> -->
+<!-- <sql> -->
+<!-- <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql
+    </file> -->
+<!-- </sql> -->
+<!-- </install> -->
+<!-- <uninstall> -->
+<!-- <sql> -->
+<!-- <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql
+    </file> -->
+<!-- </sql> -->
+<!-- </uninstall> -->
+<!-- <update> Runs on update; New in 1.6 -->
+<!-- <schemas> -->
+<!-- <schemapath type="mysql">sql/updates/mysql</schemapath> -->
+<!-- </schemas> -->
+<!-- </update> -->
+
+  <!-- Site Main File Copy Section -->
+  <!-- Note the folder attribute: This attribute describes the folder to
+    copy FROM 
+    in the package to install therefore files copied in this section are
+    copied from 
+    /site/ in the package -->
+  <!-- Site Main File Copy Section -->
+  <!-- Note the folder attribute: This attribute describes the folder to
+    copy FROM 
+    in the package to install therefore files copied in this section are
+    copied from 
+    /site/ in the package -->
+  <files folder="site">
+    <filename>index.html</filename>
+    <filename>pro6pp.php</filename>
+    <filename>controller.php</filename>
+    <folder>views</folder>
+    <folder>models</folder>
+    <folder>language</folder>
+  </files>
+  <administration>
+    <!-- Administration Menu Section -->
+    <!-- <menu img="../media/com_pro6pp/images/pro6pplogo.png"> Pro6pp
+    </menu> -->
+
+    <!-- Administration Main File Copy Section -->
+    <!-- Note the folder attribute: This attribute describes the folder to copy
+      FROM in the package to install therefore files copied in this section 
+      are copied from /admin/ in the package -->
+    <files folder="admin">
+      <!-- Admin Main File Copy Section -->
+      <filename>index.html</filename>
+      <filename>pro6pp.php</filename>
+      <filename>controller.php</filename>
+      <folder>language</folder>
+      <!-- SQL files section -->
+      <!-- <folder>sql</folder> -->
+    </files>
+  </administration>
+</install>
